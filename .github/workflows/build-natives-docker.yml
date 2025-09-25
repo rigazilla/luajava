@@ -59,7 +59,7 @@ jobs:
           apt-get update
           apt-get install -y curl wget git build-essential software-properties-common
           apt-get install -y ca-certificates gnupg lsb-release
-          apt-get install -y ant
+          apt-get install -y ant unzip
           
       - uses: actions/checkout@v4
         with:
