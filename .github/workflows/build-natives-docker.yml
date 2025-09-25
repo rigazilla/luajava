@@ -130,6 +130,11 @@ jobs:
           make check
           `pwd`/src/patchelf --version
           echo "`pwd`/src" >> $GITHUB_PATH
+
+      - name: Set up Android NDK
+        uses: android-actions/setup-android@v3
+        with:
+          packages: ndk;23.2.8568313
           
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v3
