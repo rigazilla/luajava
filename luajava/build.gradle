@@ -11,6 +11,17 @@ repositories {
 group = rootProject.group
 version = rootProject.version
 
+// ✅ Ensure all Java compile tasks use UTF-8
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+tasks.withType(Javadoc) {
+    options.encoding = 'UTF-8'
+    options.charSet = 'UTF-8'
+    options.docEncoding = 'UTF-8'
+}
+
 dependencies {
     implementation 'org.jetbrains:annotations:24.1.0'
     implementation 'com.badlogicgames.gdx:gdx-jnigen-loader:2.5.2'
