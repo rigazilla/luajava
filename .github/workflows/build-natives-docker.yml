@@ -103,6 +103,7 @@ jobs:
           apt install -y --force-yes gcc-i686-linux-gnu g++-i686-linux-gnu
           apt install -y --force-yes lib32stdc++-9-dev libstdc++-9-dev-i386-cross
           apt install -y --force-yes libc6-dev-i386 libc6-dev-i386-cross linux-libc-dev-i386-cross
+          apt install -y g++-multilib
           # arm64
           apt install -y --force-yes gcc-aarch64-linux-gnu g++-aarch64-linux-gnu libc6-dev-arm64-cross
           apt install -y --force-yes libstdc++-9-dev-arm64-cross linux-libc-dev-arm64-cross
