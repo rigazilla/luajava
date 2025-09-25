@@ -69,15 +69,15 @@ jobs:
         uses: robinraju/release-downloader@v1.10
         with:
           repository: 'mstorsjo/llvm-mingw'
-          tag: 20240619
-          fileName: llvm-mingw-20240619-ucrt-ubuntu-22.04-x86_64.tar.xz
+          tag: 20250924
+          fileName: llvm-mingw-20250924-ucrt-ubuntu-22.04-x86_64.tar.xz
           tarBall: false
           zipBall: false
       - name: Set up llvm-mingw
         run: |
           sudo mkdir -p /usr/local
-          sudo tar -Jxf llvm-mingw-20240619-ucrt-ubuntu-22.04-x86_64.tar.xz -C /usr/local
-          echo "PATH=/usr/local/llvm-mingw-20240619-ucrt-ubuntu-22.04-x86_64/bin:$PATH" >> $GITHUB_ENV
+          sudo tar -Jxf llvm-mingw-20250924-ucrt-ubuntu-22.04-x86_64.tar.xz -C /usr/local
+          echo "PATH=/usr/local/llvm-mingw-20250924-ucrt-ubuntu-22.04-x86_64/bin:$PATH" >> $GITHUB_ENV
       - name: Install cross-compilation toolchains
         run: |
           sudo apt update
