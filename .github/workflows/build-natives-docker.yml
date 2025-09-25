@@ -134,7 +134,7 @@ jobs:
       - name: Set up Android NDK
         uses: android-actions/setup-android@v3
         with:
-          packages: ndk;23.2.8568313
+          packages: ndk;21.4.7075529
           
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v3
