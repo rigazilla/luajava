@@ -144,6 +144,9 @@ jobs:
       - name: Build natives
         run: |
           export NDK_HOME=$ANDROID_NDK_LATEST_HOME
+          echo "NDK_HOME=$NDK_HOME"
+          ls -l $NDK_HOME
+          which ndk-build
           ./gradlew jniGen jnigenBuildLinux jnigenBuildLinux64
           ./gradlew jniGen jnigenBuildLinuxARM jnigenBuildLinuxARM64
           # TODO: ./gradlew jniGen jnigenBuildLinuxRISCV64
