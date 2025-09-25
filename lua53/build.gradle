@@ -20,6 +20,11 @@ repositories {
 group = rootProject.group
 version = rootProject.version
 
+// ✅ Ensure all Java compile tasks use UTF-8
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
 configurations {
     desktopNatives {
         canBeConsumed = true
