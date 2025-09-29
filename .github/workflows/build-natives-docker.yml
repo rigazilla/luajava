@@ -156,7 +156,7 @@ jobs:
           ./gradlew jniGen jnigenBuildLinux jnigenBuildLinux64
           ./gradlew jniGen jnigenBuildLinuxARM jnigenBuildLinuxARM64
           # TODO: ./gradlew jniGen jnigenBuildLinuxRISCV64
-          ./gradlew jniGen jnigenBuildAndroid jnigenBuildWindows jnigenBuildWindows64 # skip jnigenBuildWindowsARM64
+          ./gradlew jniGen jnigenBuildWindows jnigenBuildWindows64 # skip jnigenBuildAndroid jnigenBuildWindowsARM64
           
       - name: Test (Desktop)
         run: |
