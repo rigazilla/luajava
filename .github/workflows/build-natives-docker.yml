@@ -286,7 +286,8 @@ jobs:
           startsWith(github.ref, 'refs/tags/')
         run: echo "IS_RELEASE=true" >> $GITHUB_ENV
       - name: Publish
-        if: ${{ github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/') }}
+      #skipping publish for now, as it fails due to lack of permissions
+        if: ${{ false && (github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/')) }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
