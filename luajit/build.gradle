@@ -144,16 +144,16 @@ buildLuaTargets(
                 ['make', 'amalg',
                  'HOST_CC=gcc -m64 -D_FORTIFY_SOURCE=0', 'CFLAGS=-fPIC',
                  'TARGET_SYS=Linux', 'CROSS=aarch64-linux-gnu-']),
-        // addLuaJitTarget(Platform.Win32,
-        //         ['make', 'amalg',
-        //          'HOST_CC=gcc -m32 -I/usr/i686-linux-gnu/include', 'CFLAGS=-fPIC',
-        //          'BUILDMODE=static',
-        //          'CROSS=i686-w64-mingw32-', 'TARGET_SYS=Windows']),
-        // addLuaJitTarget(Platform.Win64,
-        //         ['make', 'amalg',
-        //          'HOST_CC=gcc -m64', 'CFLAGS=-fPIC',
-        //          'BUILDMODE=static',
-        //          'CROSS=x86_64-w64-mingw32-', 'TARGET_SYS=Windows']),
+        addLuaJitTarget(Platform.Win32,
+                ['make', 'amalg',
+                 'HOST_CC=gcc -m32 -I/usr/i686-linux-gnu/include', 'CFLAGS=-fPIC',
+                 'BUILDMODE=static',
+                 'CROSS=i686-w64-mingw32-', 'TARGET_SYS=Windows']),
+        addLuaJitTarget(Platform.Win64,
+                ['make', 'amalg',
+                 'HOST_CC=gcc -m64', 'CFLAGS=-fPIC',
+                 'BUILDMODE=static',
+                 'CROSS=x86_64-w64-mingw32-', 'TARGET_SYS=Windows']),
         // addLuaJitTarget(Platform.WinAArch64,
         //         ['make', 'amalg',
         //          'HOST_CC=gcc -m64', 'CFLAGS=-fPIC',
@@ -201,12 +201,12 @@ jnigen {
         linkerConfig(it, Platform.AArch64)
     })
 
-    // add(Windows, x32, x86, {
-    //     linkerConfig(it, Platform.Win32)
-    // })
-    // add(Windows, x64, x86, {
-    //     linkerConfig(it, Platform.Win64)
-    // })
+    add(Windows, x32, x86, {
+        linkerConfig(it, Platform.Win32)
+    })
+    add(Windows, x64, x86, {
+        linkerConfig(it, Platform.Win64)
+    })
     // add(Windows, x64, ARM) {
     //     linkerConfig(it, Platform.WinAArch64)
     // }
@@ -261,8 +261,8 @@ tasks.jnigenBuildLinux.dependsOn(tasks.buildLuaLinux32)
 tasks.jnigenBuildLinux64.dependsOn(tasks.buildLuaLinux64)
 tasks.jnigenBuildLinuxARM.dependsOn(tasks.buildLuaARM)
 tasks.jnigenBuildLinuxARM64.dependsOn(tasks.buildLuaAArch64)
-// tasks.jnigenBuildWindows.dependsOn(tasks.buildLuaWin32)
-// tasks.jnigenBuildWindows64.dependsOn(tasks.buildLuaWin64)
+tasks.jnigenBuildWindows.dependsOn(tasks.buildLuaWin32)
+tasks.jnigenBuildWindows64.dependsOn(tasks.buildLuaWin64)
 // tasks.jnigenBuildWindowsARM64.dependsOn(tasks.buildLuaWinAArch64)
 tasks.jnigenBuildMacOsX64.dependsOn(tasks.buildLuaMacOsXMerge)
 // tasks.jnigenBuildAndroid.dependsOn(tasks.buildLuaAndroid)
