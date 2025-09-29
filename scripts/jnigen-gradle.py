@@ -75,9 +75,9 @@ jnigen {{
         libraries = ' -lm '
     }}
 
-    add(Windows, x32)
-    add(Windows, x64)
-    add(Windows, x64, ARM)
+    # add(Windows, x32)
+    # add(Windows, x64)
+    # add(Windows, x64, ARM)
 
     add(Linux, x32)
     add(Linux, x64)
@@ -100,15 +100,15 @@ jnigen {{
         cppFlags += macFlags
     }}
 
-    add(Android) {{
-        String androidFlags = ' -D_FORTIFY_SOURCE=1 -DLUA_USE_DLOPEN '
-        cFlags += androidFlags
-        cppFlags += androidFlags
-        androidApplicationMk = [
-                'APP_PLATFORM := android-21',
-                "APP_CFLAG :=$androidFlags",
-        ]
-    }}
+    # add(Android) {{
+    #     String androidFlags = ' -D_FORTIFY_SOURCE=1 -DLUA_USE_DLOPEN '
+    #     cFlags += androidFlags
+    #     cppFlags += androidFlags
+    #     androidApplicationMk = [
+    #             'APP_PLATFORM := android-21',
+    #             "APP_CFLAG :=$androidFlags",
+    #     ]
+    # }}
 
     robovm {{
         forceLinkClasses "java.lang.Class", "java.lang.Throwable", "party.iroiro.luajava.JuaAPI"
