@@ -58,6 +58,7 @@ tasks.register('allJavadoc', Javadoc) {
             'lua52',
             'lua53',
             'lua54',
+            'luaispn',
             'luajit',
             'luaj',
             'luajava',
