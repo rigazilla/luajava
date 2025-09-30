@@ -44,8 +44,8 @@ jnigen {
 
     all {
         headerDirs = ['../../jni/luajava', 'mod', 'lua51/src', 'lua51/etc']
-        cppExcludes = ['luaispn/**/*']
-        cExcludes = ['luaispn/**/*']
+        cppExcludes = ['lua51/**/*']
+        cExcludes = ['lua51/**/*']
         libraries = ' -lm '
     }
 
