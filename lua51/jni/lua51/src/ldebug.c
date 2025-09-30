@@ -46,7 +46,7 @@ static int currentline (lua_State *L, CallInfo *ci) {
   if (pc < 0)
     return -1;  /* only active lua functions have current-line information */
   else
-    return luagetline(ci_func(ci)->l.p, pc);
+    return getline(ci_func(ci)->l.p, pc);
 }
 
 
@@ -79,7 +79,6 @@ LUA_API int lua_gethookmask (lua_State *L) {
 LUA_API int lua_gethookcount (lua_State *L) {
   return L->basehookcount;
 }
-
 
 LUA_API int lua_getstack (lua_State *L, int level, lua_Debug *ar) {
   int status;
