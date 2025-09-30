@@ -20,7 +20,7 @@
  * SOFTWARE.
  */
 
-package party.iroiro.luajava.lua51;
+package party.iroiro.luajava.luaispn;
 
 import party.iroiro.luajava.AbstractLua;
 import party.iroiro.luajava.LuaException;
@@ -29,7 +29,7 @@ import party.iroiro.luajava.LuaNatives;
 
 import java.util.concurrent.atomic.AtomicReference;
 
-import static party.iroiro.luajava.lua51.Lua51Consts.*;
+import static party.iroiro.luajava.luaispn.Lua51Consts.*;
 
 /**
  * A thin wrapper around a Lua 5.1 Lua state

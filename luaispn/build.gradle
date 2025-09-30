@@ -43,9 +43,9 @@ jnigen {
     sharedLibName = 'luaispn'
 
     all {
-        headerDirs = ['../../jni/luajava', 'mod', 'lua51/src', 'lua51/etc']
-        cppExcludes = ['lua51/**/*']
-        cExcludes = ['lua51/**/*']
+        headerDirs = ['../../jni/luajava', 'mod', 'luaispn/src', 'luaispn/etc']
+        cppExcludes = ['luaispn/**/*']
+        cExcludes = ['luaispn/**/*']
         libraries = ' -lm '
     }
 
@@ -89,7 +89,7 @@ jnigen {
     }
     add(IOS, x64) {
         libraries = ''
-        xcframeworkBundleIdentifier = "party.iroiro.luajava.lua51"
+        xcframeworkBundleIdentifier = "party.iroiro.luajava.luaispn"
         minIOSVersion = "11.0"
     }
 }
@@ -101,7 +101,7 @@ artifacts {
 
 tasks.named('jar') {
     manifest {
-        attributes('Automatic-Module-Name': 'party.iroiro.luajava.lua51')
+        attributes('Automatic-Module-Name': 'party.iroiro.luajava.luaispn')
     }
 }
 

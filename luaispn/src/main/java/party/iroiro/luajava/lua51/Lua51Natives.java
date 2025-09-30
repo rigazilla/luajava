@@ -20,7 +20,7 @@
  * SOFTWARE.
  */
 
-package party.iroiro.luajava.lua51;
+package party.iroiro.luajava.luaispn;
 
 import java.util.concurrent.atomic.AtomicReference;
 import java.nio.Buffer;
@@ -120,7 +120,7 @@ public class Lua51Natives implements LuaNatives {
             if (loaded.get() != null) { return; }
             try {
                 GlobalLibraryLoader.register(Lua51Natives.class, false);
-                String file = GlobalLibraryLoader.load("lua51");
+                String file = GlobalLibraryLoader.load("luaispn");
                 if (initBindings() != 0) {
                     throw new RuntimeException("Unable to init bindings");
                 }
