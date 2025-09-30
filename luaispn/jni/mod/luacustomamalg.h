@@ -17,7 +17,6 @@ extern "C" {
 
 #include "lapi.c"
 #include "lcode.c"
-#include "lctype.c"
 #include "ldebug.c"
 #include "ldo.c"
 #include "ldump.c"
@@ -38,8 +37,6 @@ extern "C" {
 
 #include "lauxlib.c"
 #include "lbaselib.c"
-#include "lbitlib.c"
-#include "lcorolib.c"
 #include "ldblib.c"
 #include "liolib.c"
 #include "linit.c"
