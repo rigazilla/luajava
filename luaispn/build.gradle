@@ -43,7 +43,7 @@ jnigen {
     sharedLibName = 'luaispn'
 
     all {
-        headerDirs = ['../../jni/luajava', 'mod', 'luaispn/src', 'luaispn/etc']
+        headerDirs = ['../../jni/luajava', 'mod', 'lua51/src', 'luaispn/etc']
         cppExcludes = ['luaispn/**/*']
         cExcludes = ['luaispn/**/*']
         libraries = ' -lm '
