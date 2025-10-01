@@ -187,7 +187,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: most-natives
-          path: ./*/libs
+          path: |
+            ./*/libs
+            ./**/*.jar
           retention-days: 5
 
   linux-testing:
@@ -280,7 +282,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: natives
-          path: ./*/libs
+          path: |
+            ./*/libs
+            ./**/*.jar
       - name: Release?
         if: |
           startsWith(github.ref, 'refs/tags/')
