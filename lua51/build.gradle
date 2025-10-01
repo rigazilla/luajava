@@ -49,8 +49,8 @@ jnigen {
         libraries = ' -lm '
     }
 
-    // add(Windows, x32)
-    // add(Windows, x64)
+    add(Windows, x32)
+    add(Windows, x64)
     // add(Windows, x64, ARM)
 
     add(Linux, x32)
